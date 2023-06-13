@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="ButtonStyleMain" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">@dimen/button_weight</item>
+        <item name="android:backgroundTint">?attr/colorOnPrimary</item>
+        <item name="android:textColor">?attr/colorPrimaryVariant</item>
+        <item name="android:inputType">textCapSentences</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">@dimen/icon_for_text</item>
+        <item name="iconTint">?attr/colorPrimaryVariant</item>
+        <item name="cornerRadius">@dimen/button_radius</item>
+        <item name="android:layout_marginTop">@dimen/margin_main</item>
+        <item name="android:fontFamily">@font/ys_display_medium</item>
+    </style>
+
+    <style name="TextViewSettings">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">start|center_vertical</item>
+        <item name="android:layout_marginStart">@dimen/margin_settings</item>
+        <item name="android:layout_marginTop">@dimen/margin_settings_20</item>
+        <item name="android:layout_marginBottom">@dimen/margin_settings_20</item>
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:fontFamily">@font/ys_text_regular</item>
+    </style>
+
+    <style name="ImageViewSettings">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">end|center_vertical</item>
+        <item name="android:layout_margin">@dimen/margin_settings_20</item>
+        <item name="tint">?attr/colorSecondaryVariant</item>
+        <item name="android:trackTint" tools:targetApi="m">@color/light_gray</item>
+        <item name="android:thumbTint">@color/gray</item>
+        <item name="android:checked">false</item>
+    </style>
+
+    <style name="textPanelHeader">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:paddingStart">@dimen/padding_text</item>
+        <item name="android:fontFamily">@font/ys_display_medium</item>
+    </style>
+
+    <style name="panelHeaderToolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/padding_4_for_settings</item>
+        <item name="android:layout_marginBottom">@dimen/margin_button</item>
+        <item name="android:background">?attr/colorSecondary</item>
+        <item name="titleTextAppearance">@style/textPanelHeader</item>
+        <item name="navigationIcon">@drawable/ic_arrow_back</item>
+        <item name="contentInsetStart">0dp</item>
+        <item name="contentInsetStartWithNavigation">0dp</item>
+        <item name="titleMarginStart">0dp</item>
+    </style>
+
+    <style name="textTrackView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?attr/colorSecondaryVariant</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:fontFamily">@font/ys_text_regular</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="searchButtonRefresh">
+        <item name="cornerRadius">54dp</item>
+    </style>
+
+    <style name="searchTextview">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/margin_text_search_24</item>
+        <item name="android:layout_marginEnd">@dimen/margin_text_search_24</item>
+        <item name="android:layout_marginBottom">@dimen/margin_text_search_24</item>
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+        <item name="android:textSize">@dimen/text_size_20</item>
+        <item name="android:fontFamily">@font/ys_display_medium</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="searchImage">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical|center</item>
+        <item name="android:layout_marginBottom">@dimen/search_margin_image</item>
+    </style>
+
+    <style name="searchPlaceholder">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">86dp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:visibility">invisible</item>
+    </style>
+
+    <style name="settingsSwitchMaterial">
+        <item name="android:trackTint" tools:targetApi="m">@color/light_gray</item>
+        <item name="android:thumbTint">@color/gray</item>
+    </style>
+
+    <style name="dataNameTrack">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/margin_media</item>
+        <item name="android:layout_marginTop">@dimen/margin_media</item>
+        <item name="android:layout_marginEnd">@dimen/margin_media</item>
+        <item name="android:layout_marginBottom">@dimen/margin_media</item>
+        <item name="android:fontFamily">@font/ys_text_regular</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="layout_constraintStart_toStartOf">@id/left_guideline</item>
+    </style>
+
+    <style name="dataTrack">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/ys_text_regular</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:layout_marginStart">@dimen/margin_media</item>
+        <item name="android:layout_marginTop">@dimen/margin_media</item>
+        <item name="android:layout_marginEnd">@dimen/margin_media</item>
+        <item name="android:layout_marginBottom">@dimen/margin_media</item>
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+        <item name="layout_constraintStart_toEndOf">@id/barrier</item>
+        <item name="android:gravity">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="buttonPlayPause">
+        <item name="android:layout_width">84dp</item>
+        <item name="android:layout_height">84dp</item>
+        <item name="maxImageSize">64dp</item>
+        <item name="fabCustomSize">84dp</item>
+        <item name="android:foregroundGravity">center</item>
+        <item name="elevation">0dp</item>
+        <item name="backgroundTint">?attr/colorOnSecondary</item>
+        <item name="tint">?attr/colorSecondary</item>
+        <item name="android:enabled">false</item>
+    </style>
+</resources>

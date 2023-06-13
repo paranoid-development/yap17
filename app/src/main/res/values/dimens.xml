@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size">26sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="icon_for_text">12dp</dimen>
+    <dimen name="button_weight">1</dimen>
+    <dimen name="button_radius">16dp</dimen>
+    <dimen name="margin_main">16dp</dimen>
+    <dimen name="padding_4_for_settings">4dp</dimen>
+    <dimen name="margin_settings">16dp</dimen>
+    <dimen name="margin_settings_20">20dp</dimen>
+    <dimen name="button_height">0dp</dimen>
+    <dimen name="padding_text">12dp</dimen>
+    <dimen name="size_arrow_back">48dp</dimen>
+    <dimen name="margin_button">24dp</dimen>
+    <dimen name="margin_edit_text">16dp</dimen>
+    <dimen name="roundingRadius">2dp</dimen>
+    <dimen name="roundingRadiusPlayer">8dp</dimen>
+    <dimen name="sideImageTrack">45dp</dimen>
+    <dimen name="marginImageTrack">8dp</dimen>
+    <dimen name="marginTextTrack">1dp</dimen>
+    <dimen name="marginEllipseTrack">5dp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="margin_text_search_24">24dp</dimen>
+    <dimen name="margin_text_search_12">12dp</dimen>
+    <dimen name="search_margin_image">16dp</dimen>
+    <dimen name="margin_media">8dp</dimen>
+    <dimen name="margin_top_media">16dp</dimen>
+    <dimen name="size_button">52dp</dimen>
+    <dimen name="text_size_22">22sp</dimen>
+    <dimen name="margin_bottom_54">54dp</dimen>
+    <dimen name="margin_bottom_24">24dp</dimen>
+    <dimen name="margin_bottom_12">12dp</dimen>
+    <dimen name="sizeProgressBar">44dp</dimen>
+</resources>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:theme="@style/Theme.PlaylistMaker"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSecondary"
+    android:orientation="vertical"
+    tools:context=".main.ui.activity.MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarSetting"
+        app:title="@string/settings"
+        style="@style/panelHeaderToolbar"/>
+
+    <FrameLayout
+        android:id="@+id/button_dark_theme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            style="@style/settingsSwitchMaterial"
+            android:id="@+id/themeSwitcher"
+            android:text="@string/dark_Theme"
+            android:layout_marginHorizontal="16dp"
+            android:layout_gravity="start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_16"
+            android:fontFamily="@font/ys_text_regular"
+            android:textColor="?attr/colorOnSecondary"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/button_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="@string/share"
+            style="@style/TextViewSettings"/>
+
+        <ImageView
+            android:id="@+id/share"
+            android:src="@drawable/ic_share"
+            style="@style/ImageViewSettings"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/button_support"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/TextViewSettings"
+            android:text="@string/support"/>
+
+        <ImageView
+            android:id="@+id/support"
+            android:src="@drawable/ic_support"
+            style="@style/ImageViewSettings"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/button_user_agreement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/TextViewSettings"
+            android:text="@string/arrow_forward"/>
+
+        <ImageView
+            android:id="@+id/user_agreement"
+            android:src="@drawable/ic_arrow_forward"
+            style="@style/ImageViewSettings"/>
+    </FrameLayout>
+</LinearLayout>

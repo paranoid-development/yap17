@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="settingsSwitchMaterial">
+        <item name="trackTint" tools:targetApi="m">@color/light_blue</item>
+        <item name="thumbTint">@color/blue</item>
+    </style>
+</resources>
