@@ -2,24 +2,24 @@ package com.practicum.playlistmaker.search.domain.impl
 
 import com.practicum.playlistmaker.player.domain.model.Track
 import com.practicum.playlistmaker.search.data.network.NetworkClient
-import com.practicum.playlistmaker.search.data.sharedpreferences.SharedPreferencesSearchClient
+import com.practicum.playlistmaker.search.data.sharedpreferences.SharedPreferencesClient
 import com.practicum.playlistmaker.search.domain.api.SearchInteractor
 import com.practicum.playlistmaker.search.domain.models.NetworkError
 
 class SearchInteractorImpl(
-    private val sharedPreferencesSearchClient: SharedPreferencesSearchClient,
+    private val sharedPreferencesClient: SharedPreferencesClient,
     private val networkClient: NetworkClient,
 ) : SearchInteractor {
     override fun clearHistory() {
-        sharedPreferencesSearchClient.clearHistory()
+        sharedPreferencesClient.clearHistory()
     }
 
     override fun tracksHistoryFromJson(): List<Track> {
-        return sharedPreferencesSearchClient.tracksHistoryFromJson()
+        return sharedPreferencesClient.tracksHistoryFromJson()
     }
 
     override fun addTrack(track: Track, position: Int) {
-        sharedPreferencesSearchClient.addTrack(track, position)
+        sharedPreferencesClient.addTrack(track, position)
     }
 
     override fun loadTracks(

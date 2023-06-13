@@ -5,10 +5,9 @@ import com.practicum.playlistmaker.player.domain.api.PlayerInteractor
 import com.practicum.playlistmaker.player.domain.api.PlayerStateListener
 import com.practicum.playlistmaker.player.domain.api.TrackPlayer
 
-class PlayerInteractorImpl(
-    private val trackPlayer: TrackPlayer) : PlayerInteractor {
-    override fun preparePlayer(previewUrl: String?) {
-        trackPlayer.preparePlayer(previewUrl)
+class PlayerInteractorImpl(private val trackPlayer: TrackPlayer) : PlayerInteractor {
+    override fun preparePlayer() {
+        trackPlayer.preparePlayer()
     }
 
     override fun startPlayer() {

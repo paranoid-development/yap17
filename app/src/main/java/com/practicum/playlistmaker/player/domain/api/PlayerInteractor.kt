@@ -2,7 +2,7 @@ package com.practicum.playlistmaker.player.domain.api
 
 interface PlayerInteractor {
 
-    fun preparePlayer(previewUrl: String?)
+    fun preparePlayer()
     fun startPlayer()
     fun pausePlayer()
     fun subscribeOnPlayer(listener: PlayerStateListener)

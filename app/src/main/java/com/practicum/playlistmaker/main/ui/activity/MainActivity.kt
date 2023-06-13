@@ -3,20 +3,19 @@ package com.practicum.playlistmaker.main.ui.activity
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import com.practicum.playlistmaker.R
+import com.practicum.playlistmaker.main.creator.CreatorMain
 import com.practicum.playlistmaker.main.ui.model.NavigationViewState
 import com.practicum.playlistmaker.main.ui.router.NavigationRouter
 import com.practicum.playlistmaker.main.ui.view_model.MainViewModel
-import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {
     //Переменные для работы с UI
     lateinit var buttonSearch: Button
     lateinit var buttonMedia: Button
     lateinit var buttonSettings: Button
-
-    private val mainViewModel: MainViewModel by viewModel()
-    private val mediaRouter = NavigationRouter(this)
+    private lateinit var mainViewModel: MainViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +25,11 @@ class MainActivity : AppCompatActivity() {
 
         setListeners()
 
+        mainViewModel = ViewModelProvider(
+            this,
+            MainViewModel.getViewModelFactory()
+        )[MainViewModel::class.java]
+
         mainViewModel.observeNavigationViewState().observe(this) {
             navigation(it)
         }
@@ -33,9 +37,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun navigation(state: NavigationViewState) {
         when (state) {
-            is NavigationViewState.Search -> mediaRouter.getSearch()
-            is NavigationViewState.Settings -> mediaRouter.getSettings()
-            is NavigationViewState.MediaLibrary -> mediaRouter.getMediaLibrary()
+            is NavigationViewState.Search -> getNavigationRouter().getSearch()
+            is NavigationViewState.Settings -> getNavigationRouter().getSettings()
+            is NavigationViewState.MediaLibrary -> getNavigationRouter().getMediaLibrary()
         }
     }
 
@@ -58,5 +62,9 @@ class MainActivity : AppCompatActivity() {
         buttonSettings.setOnClickListener() {
             mainViewModel.onSettingsView()
         }
+    }
+
+    private fun getNavigationRouter(): NavigationRouter {
+        return CreatorMain.getNavigationRouter(this)
     }
 }
