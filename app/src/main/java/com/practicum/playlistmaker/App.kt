@@ -4,11 +4,17 @@ import android.app.Application
 import android.content.Context
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatDelegate
+import com.practicum.playlistmaker.di.AppComponent
+import com.practicum.playlistmaker.di.DaggerAppComponent
 import com.practicum.playlistmaker.settings.creator.CreatorSettings
 
 class App : Application() {
 
     private var darkTheme = false
+
+    val appComponent: AppComponent by lazy {
+        DaggerAppComponent.factory().create(applicationContext)
+    }
 
     override fun onCreate() {
         super.onCreate()
