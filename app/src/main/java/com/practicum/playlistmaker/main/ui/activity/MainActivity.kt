@@ -1,5 +1,6 @@
 package com.practicum.playlistmaker.main.ui.activity
 
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
@@ -25,6 +26,9 @@ class MainActivity : AppCompatActivity() {
 
   @Inject
   lateinit var router: NavigationRouter
+
+  @Inject
+  lateinit var sharedPreferences: SharedPreferences
 
   lateinit var mainComponent: MainComponent
 

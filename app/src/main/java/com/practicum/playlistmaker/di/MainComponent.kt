@@ -3,7 +3,7 @@ package com.practicum.playlistmaker.di
 import com.practicum.playlistmaker.main.ui.activity.MainActivity
 import dagger.Subcomponent
 
-@Subcomponent
+@Subcomponent(modules = [MainModule::class])
 interface MainComponent {
 
   @Subcomponent.Factory
